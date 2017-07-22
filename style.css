@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+#map {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#map.hide-ants div.cell span.ant {
+    visibility: hidden;
+}
+
+#map.hide-base div.cell.base, #map.hide-pheromone div.cell.pheromone, #map.hide-food div.cell.food, #map.hide-obstacle div.cell.obstacle {
+    background-color: #EEE !important;
+}
+
+.options {
+    margin-top: 20px;
+}
+
+.cell {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    background-color: #EEE;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.cell.base {
+    background-color: #66B34E;
+}
+
+.cell.obstacle {
+    background-color: #555;
+}
+
+.cell.food {
+    background-color: #F64744;
+}
+
+span.ant {
+    width: 2px;
+    height: 2px;
+    background: #000;
+    margin: 1px;
+}
+
+span.ant.full {
+    background: #F64744;
+}
+
+.menu {
+    padding-right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.settings {
+    width: 20px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.restart {
+    text-align: center;
+    padding-left: 0px !important;
+    color: white !important;
+    font-size: 25px !important;
+}
+
+.restart:hover {
+    cursor: pointer;
+}
+
+.inputValue {
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+
+.sidenav p:first-of-type {
+    padding-top: 0px;
+}
+
+.sidenav p, .sidenav a {
+    padding: 5px 0px 0px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav input {
+    margin-left: 32px;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.food {
+    color: white;
+    font-size: 18px;
+}
